@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="backend/common/head"></th:block>
+    <script src="/oss/ckeditor/ckeditor.js"></script>
+    <!--<script src="/oss/backend/bower_components/ckeditor/ckeditor.js"></script>-->
+    <!--<script src="https://cdn.ckeditor.com/4.8.0/full-all/ckeditor.js"></script>-->
+
+</head>
+<body>
+<div class="container">
+    <form action="/backend/article" method="post">
+        <h2><label for="editor1">Document Editor</label></h2>
+        <textarea id="editor1" th:name="content"></textarea>
+    </form>
+</div>
+<script>
+    var editor = CKEDITOR.replace( 'editor1' );
+    editor.on( 'change', function( evt ) {
+        // getData() returns CKEditor's HTML content.
+        console.log( 'Total bytes: ' + evt.editor.getData().length );
+    });
+</script>
+</body>
+</html>
