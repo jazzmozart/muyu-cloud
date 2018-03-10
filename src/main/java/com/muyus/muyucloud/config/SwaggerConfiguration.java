@@ -23,6 +23,8 @@ public class SwaggerConfiguration {
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
+                .host("http://blog.muyus.com")
+                .groupName("木渔博客")
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.muyus.muyucloud.view.api.controller"))
