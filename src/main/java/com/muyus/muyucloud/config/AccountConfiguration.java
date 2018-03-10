@@ -1,4 +1,4 @@
-package com.muyus.muyucloud.service.account;
+package com.muyus.muyucloud.config;
 
 import com.auth0.jwt.algorithms.Algorithm;
 import org.apache.commons.codec.binary.Base64;

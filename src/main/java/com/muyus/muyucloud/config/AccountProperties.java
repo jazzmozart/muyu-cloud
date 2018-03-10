@@ -1,4 +1,4 @@
-package com.muyus.muyucloud.service.account;
+package com.muyus.muyucloud.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

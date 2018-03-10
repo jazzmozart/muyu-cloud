@@ -1,4 +1,4 @@
-package com.muyus.muyucloud.service.swagger;
+package com.muyus.muyucloud.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,8 +34,7 @@ public class SwaggerConfiguration {
         return new ApiInfoBuilder()
                 .title("Spring Boot中使用Swagger2构建RESTful APIs")
                 .description("更多Spring Boot相关文章请关注：http://www.muyus.com")
-                .termsOfServiceUrl("http://demo.muyus.com")
-                .contact("木渔")
+                .termsOfServiceUrl("http://blog.muyus.com")
                 .version("1.0")
                 .build();
     }

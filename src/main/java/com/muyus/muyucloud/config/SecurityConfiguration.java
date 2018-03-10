@@ -1,5 +1,6 @@
-package com.muyus.muyucloud.service.auth;
+package com.muyus.muyucloud.config;
 
+import com.muyus.muyucloud.service.auth.AdminUserDetailService;
 import nz.net.ultraq.thymeleaf.LayoutDialect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -25,7 +26,7 @@ import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
  */
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     AdminUserDetailService adminUserDetailService;
 
@@ -82,11 +83,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         templateEngine.addDialect(sec);
         templateEngine.addDialect(new LayoutDialect());
         return templateEngine;
-    }
-
-    public static void main(String[] args) {
-        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(11);
-        System.out.println(passwordEncoder.encode("123456"));
     }
 
 }

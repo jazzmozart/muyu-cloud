@@ -1,5 +1,6 @@
 package com.muyus.muyucloud.view.api.controller;
 
+import com.muyus.muyucloud.view.api.vo.AccountVO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,8 +25,10 @@ public class AccountController {
 
     @ApiOperation(value = "获取帐号")
     @GetMapping(path = "")
-    public void index(){
+    public AccountVO index(){
         System.out.println("-------------");
+        AccountVO accountVO = new AccountVO();
+        return accountVO;
     }
 
 }
